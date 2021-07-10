@@ -1,0 +1,74 @@
+<form>
+    <h1>Novo Fornecedor</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome Empresa</mat-label>
+        <input matInput [(ngModel)]="fornecedor.name" type="text" name="nomeEmpresa" placeholder="ex: Thiago Bezerra" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CNPJ</mat-label>
+        <input matInput [(ngModel)]="fornecedor.cnpj" type="text" name="cnpj" placeholder="ex: 000.000.000/0001-00" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Rua</mat-label>
+        <input matInput [(ngModel)]="address.street" type="text" name="rua" placeholder="ex: Rua Alto do Pascoal" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Número</mat-label>
+        <input matInput [(ngModel)]="address.number" type="text" name="numero" placeholder="ex: 12345" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Complemento</mat-label>
+        <input matInput [(ngModel)]="address.complement" type="text" name="complemento" placeholder="ex: bloco A, apto 101, casa" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Bairro</mat-label>
+        <mat-select [(value)]="address.neighborhood" name="bairro">
+            <mat-option *ngFor="let neighborhood of neighborhoods" [value]="neighborhood">{{neighborhood}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CEP</mat-label>
+        <input matInput [(ngModel)]="address.zipCode" type="text" name="cep" placeholder="ex: 55555-555" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Cidade</mat-label>
+        <mat-select [(value)]="address.city" name="cidade">
+            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Estado</mat-label>
+        <mat-select [(value)]="address.state" name="estado">
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>País</mat-label>
+        <mat-select [(value)]="address.country" name="pais">
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Nome de Contato</mat-label>
+        <input matInput [(ngModel)]="fornecedor.responsibleName" type="text" name="responsibleName" placeholder="ex: Thiago Bezerra" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)]="fornecedor.telephone" type="tel" name="telefone" placeholder="ex: (81) 7777-7777" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="fornecedor.email" type="email" name="email" placeholder="ex: fulano@gmail.com" />
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="create()" class="demo-button">
+            Salvar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="navegandoParaFornecedores()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

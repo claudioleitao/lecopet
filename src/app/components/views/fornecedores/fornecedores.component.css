@@ -1,0 +1,107 @@
+.content {
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.title h1 {
+    font-size: 2rem;
+    color: rgb(72, 73, 73);
+    font-weight: 500;
+}
+
+.table {
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+th {
+    background-color: rgba(234.0,74.0,48.0,1);
+    color: white;
+    font-size: 1.2rem;
+}
+
+tr {
+    background-color: rgba(6, 2, 48, 0.5);
+}
+
+tr:hover {
+    background-color: rgba(234.0,74.0,48.0,1);
+}
+
+mat-label {
+    color: black;
+}
+
+th.id {
+    border-top-left-radius: 15px;
+}
+
+th.last {
+    border-top-right-radius: 15px;
+    width: 4rem;
+}
+
+mat-paginator {
+    background-color: rgba(234.0,74.0,48.0,1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(255,255,255,0);
+}
+
+.demo-button-container {
+    padding-bottom: 16px;
+}
+  
+.demo-button {
+    background-color: rgba(234.0,74.0,48.0,1);
+    box-shadow: 0px 0px 10px rgba(114, 114, 113, 1);
+    color: white;
+    height: 3.2rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+}
+
+.demo-button + .demo-button {
+    margin-left: 8px;
+}
+
+mat-form-field {
+    font-size: 14px;
+    width: 54%;
+    margin-left: 25px;
+    color: rgba(234.0,74.0,48.0,1);
+}
+
+.edit {
+    color: white;
+    margin-left: 8px;
+}
+
+.delete {
+    color: red;
+    margin-left: 8px;
+}
+
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: rgb(12, 1, 75) !important;
+}
+
+.green {
+    color:green;
+}
+
+.red {
+    color: red;
+}

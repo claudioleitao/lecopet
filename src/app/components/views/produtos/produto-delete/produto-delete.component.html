@@ -1,0 +1,31 @@
+<form>
+    <h1>Removendo Produto</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome Produto</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="produto.name" type="text" name="nomeProduto" placeholder="ex: Thiago Bezerra" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="produto.description" type="text" name="descricao" placeholder="ex: 000.000.000/0001-00" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Código de Barras</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="produto.barCode" type="text" name="barCode" placeholder="ex: Rua Alto do Pascoal" disabled />
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Fornecedor</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.name" type="text" name="fornecedor" placeholder="ex: Rua Alto do Pascoal" disabled />
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="deletar()" class="demo-button">
+            Deletar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="cancelar()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

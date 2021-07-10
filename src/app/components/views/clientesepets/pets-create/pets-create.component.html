@@ -1,0 +1,45 @@
+<form>
+    <h1>Novo Pet</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome do animal</mat-label>
+        <input matInput [(ngModel)]="pet.name" type="text" name="nome" placeholder="ex: Thiago Bezerra" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Idade</mat-label>
+        <input matInput [(ngModel)]="pet.age" type="text" name="idade" placeholder="ex: 55555-555" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Peso</mat-label>
+        <input matInput [(ngModel)]="pet.weight" type="number" name="peso" placeholder="ex: 55555-555" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sexo</mat-label>
+        <mat-select [(value)]="pet.sex" name="sexo">
+            <mat-option value="Macho">Macho</mat-option>
+            <mat-option value="Fêmea">Fêmea</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Raça</mat-label>
+        <mat-select [(value)]="id_breed" name="raca">
+            <mat-option *ngFor="let breed1 of breeds" value="{{breed1.id}}">{{breed1.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Dono do animal</mat-label>
+        <mat-select [(value)]="id_cliente" name="cliente">
+            <mat-option *ngFor="let client1 of clients" value="{{client1.id}}">{{client1.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="salvar()" class="demo-button">
+            Salvar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="navegandoParaClientesePets()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

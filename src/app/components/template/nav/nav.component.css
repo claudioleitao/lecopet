@@ -1,0 +1,29 @@
+mat-sidenav-content {
+    background-image: url("/assets/img/background.jpg");
+    color: black;
+}
+
+mat-sidenav {
+    background-color: dimgray;
+}
+
+.container {
+    height: 85%;
+}
+
+i {
+    padding-right: .6rem;
+}
+
+span {
+    padding-left: 4rem;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-divider {
+    padding-top: .8rem;
+}
+

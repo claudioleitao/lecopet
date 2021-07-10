@@ -1,0 +1,44 @@
+<form>
+    <h1>Atualizar Pet</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome do animal</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.name" type="text" name="nome" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Idade</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.age" type="text" name="idade" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Peso</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.weight" type="number" name="peso" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sexo</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.sex" type="text" name="sexo" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Está morto?</mat-label>
+        <mat-select [(value)]="pet.dead" name="morreu">
+            <mat-option [value]="true">Morreu</mat-option>
+            <mat-option [value]="false">Não Morreu</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Raça</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.breed.name" type="text" name="raca" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Dono do animal</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="pet.client.name" type="text" name="cliente" disabled />
+    </mat-form-field>   
+    <div class="buttons">
+        <button (click)="update()" mat-raised-button class="demo-button">
+            Atualizar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button (click)="cancelar()" mat-raised-button class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

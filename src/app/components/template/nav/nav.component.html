@@ -1,0 +1,77 @@
+<mat-sidenav-container class="container">
+    <mat-menu #appCadastro="matMenu">
+        <app-menucadastros></app-menucadastros>
+    </mat-menu>
+    <mat-menu #appServico="matMenu">
+        <app-menuservico></app-menuservico>
+    </mat-menu>
+    <mat-menu #appComercial="matMenu">
+        <app-menucomercial></app-menucomercial>
+    </mat-menu>
+    <mat-menu #appFinanceiro="matMenu">
+        <app-menufinanceiro></app-menufinanceiro>
+    </mat-menu>
+    <mat-menu #appMaterial="matMenu">
+        <app-menumaterial></app-menumaterial>
+    </mat-menu>
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <a routerLink="" mat-list-item>
+                <i class="material-icons">home</i>
+                Painel de Controle
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+                <i class="material-icons">menu_book</i>
+                Configurações
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item mat-flat-button [matMenuTriggerFor]="appCadastro">
+                <i class="material-icons">home</i>
+                Cadastros
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item mat-flat-button [matMenuTriggerFor]="appServico">
+                <i class="material-icons">menu_book</i>
+                Serviços
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item mat-flat-button [matMenuTriggerFor]="appComercial">
+                <i class="material-icons">home</i>
+                Comercial
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item mat-flat-button [matMenuTriggerFor]="appFinanceiro">
+                <i class="material-icons">menu_book</i>
+                Financeiro
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item mat-flat-button [matMenuTriggerFor]="appMaterial">
+                <i class="material-icons">home</i>
+                Materiais
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <a mat-list-item>
+                <i class="material-icons">menu_book</i>
+                Ajuda
+                <span class="spacer"></span>
+                <span class="material-icons">chevron_right</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item>
+                <i class="material-icons">home</i>
+                Sair
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

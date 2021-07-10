@@ -1,0 +1,72 @@
+<form>
+    <h1>Deletar Cliente</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client.name" type="text" name="nome" placeholder="ex: Thiago Bezerra" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Rua</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client?.address?.street!" type="text" name="rua" placeholder="ex: Rua Alto do Pascoal" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Numero</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client?.address?.number!" type="text" name="numero" placeholder="ex: 12345" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Complemento</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client?.address?.complement!" type="text" name="complemento" placeholder="ex: bloco A, apto 101, casa" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Bairro</mat-label>
+        <mat-select [(value)]="client?.address?.neighborhood!" name="bairro" disabled>
+            <mat-option *ngFor="let neighborhood of neighborhoods" [value]="neighborhood">{{neighborhood}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CEP</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client?.address?.zipCode!" type="text" name="cep" placeholder="ex: 55555-555" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Cidade</mat-label>
+        <mat-select class="colorInput" [(value)]="client?.address?.city!" name="cidade" disabled>
+            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Estado</mat-label>
+        <mat-select class="colorInput" [(value)]="client?.address?.state!" name="estado" disabled>
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>País</mat-label>
+        <mat-select class="colorInput" [(value)]="client?.address?.country!" name="pais" disabled>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Telefone</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="client.telephone" type="text" name="telefone" placeholder="ex: (81) 7777-7777" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="client.email" type="email" name="email" placeholder="ex: fulano@gmail.com" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sexo</mat-label>
+        <mat-select class="colorInput" [(value)]="client.sex" name="sexo" disabled>
+            <mat-option *ngFor="let sex of sexlist" [value]="sex">{{sex}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="deletar()" class="demo-button">
+            Deletar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="cancelar()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

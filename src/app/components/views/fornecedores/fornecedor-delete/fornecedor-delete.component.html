@@ -1,0 +1,73 @@
+<form>
+    <h1>Deletar Fornecedor</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome Empresa</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.name" type="text" name="nomeEmpresa" placeholder="ex: Thiago Bezerra" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CNPJ</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.cnpj" type="text" name="cnpj" placeholder="ex: 000.000.000/0001-00" disabled />
+    </mat-form-field>    <mat-form-field class="form">
+        <mat-label>Rua</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor?.address?.street!" type="text" name="rua" placeholder="ex: Rua Alto do Pascoal" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Numero</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor?.address?.number!" type="text" name="numero" placeholder="ex: 12345" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Complemento</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor?.address?.complement!" type="text" name="complemento" placeholder="ex: bloco A, apto 101, casa" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Bairro</mat-label>
+        <mat-select [(value)]="fornecedor?.address?.neighborhood!" name="bairro" disabled>
+            <mat-option *ngFor="let neighborhood of neighborhoods" [value]="neighborhood">{{neighborhood}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CEP</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor?.address?.zipCode!" type="text" name="cep" placeholder="ex: 55555-555" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Cidade</mat-label>
+        <mat-select class="colorInput" [(value)]="fornecedor?.address?.city!" name="cidade" disabled>
+            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Estado</mat-label>
+        <mat-select class="colorInput" [(value)]="fornecedor?.address?.state!" name="estado" disabled>
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>País</mat-label>
+        <mat-select class="colorInput" [(value)]="fornecedor?.address?.country!" name="pais" disabled>
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Nome de Contato</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.responsibleName" type="text" name="responsibleName" placeholder="ex: Thiago Bezerra" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Telefone</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.telephone" type="text" name="telefone" placeholder="ex: (81) 7777-7777" disabled />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>E-mail</mat-label>
+        <input class="colorInput" matInput [(ngModel)]="fornecedor.email" type="email" name="email" placeholder="ex: fulano@gmail.com" disabled />
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="deletar()" class="demo-button">
+            Deletar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="cancelar()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

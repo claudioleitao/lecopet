@@ -1,0 +1,31 @@
+<form>
+    <h1>Atualizando Produto</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome Produto</mat-label>
+        <input matInput [(ngModel)]="produto.name" type="text" name="nomeProduto" placeholder="ex: Thiago Bezerra" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="produto.description" type="text" name="descricao" placeholder="ex: 000.000.000/0001-00" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Código de Barras</mat-label>
+        <input matInput [(ngModel)]="produto.barCode" type="text" name="barCode" placeholder="ex: Rua Alto do Pascoal" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Fornecedor</mat-label>
+        <mat-select [(value)]="produto.provider" name="fornecedor">
+            <mat-option *ngFor="let provider of fornecedores" [value]="provider.name">{{provider.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="buttons">
+        <button mat-raised-button (click)="update()" class="demo-button">
+            Alterar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="cancelar()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,72 @@
+<form>
+    <h1>Novo Cliente</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="client.name" type="text" name="nome" placeholder="ex: Thiago Bezerra" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Rua</mat-label>
+        <input matInput [(ngModel)]="address.street" type="text" name="rua" placeholder="ex: Rua Alto do Pascoal" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Numero</mat-label>
+        <input matInput [(ngModel)]="address.number" type="text" name="numero" placeholder="ex: 12345" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Complemento</mat-label>
+        <input matInput [(ngModel)]="address.complement" type="text" name="complemento" placeholder="ex: bloco A, apto 101, casa" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Bairro</mat-label>
+        <mat-select [(value)]="address.neighborhood" name="bairro">
+            <mat-option *ngFor="let neighborhood of neighborhoods" [value]="neighborhood">{{neighborhood}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>CEP</mat-label>
+        <input matInput [(ngModel)]="address.zipCode" type="text" name="cep" placeholder="ex: 55555-555" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Cidade</mat-label>
+        <mat-select [(value)]="address.city" name="cidade">
+            <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Estado</mat-label>
+        <mat-select [(value)]="address.state" name="estado">
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>País</mat-label>
+        <mat-select [(value)]="address.country" name="pais">
+            <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)]="client.telephone" type="text" name="telefone" placeholder="ex: (81) 7777-7777" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="client.email" type="email" name="email" placeholder="ex: fulano@gmail.com" />
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sexo</mat-label>
+        <mat-select [(value)]="client.sex" name="sexo">
+            <mat-option *ngFor="let sex of sexlist" [value]="sex">{{sex}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button mat-raised-button (click)="create()" class="demo-button">
+            Avançar
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button mat-raised-button (click)="navegandoParaClientesePets()" class="demo-button">
+            Cancelar
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</form>
